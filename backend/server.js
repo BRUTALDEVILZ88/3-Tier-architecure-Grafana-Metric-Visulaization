@@ -1,13 +1,13 @@
 const express = require('express');
-const cors = require('cors');
-const messageRoute = require('./routes/message');
+const router = express.Router();
 
-const app = express();
-app.use(cors());
-app.use(express.json());
+router.get('/message', (req, res) => {
+  res.json({
+    message: "Hello from the backend! 🚀 oggy",
+    app: "CloudOps Backend",
+    status: "Healthy",
+    timestamp: new Date().toISOString()
+  });
+});
 
-app.use('/api', messageRoute);
-
-const PORT = process.env.PORT || 5001;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
-module.exports = app;
+module.exports = router;
