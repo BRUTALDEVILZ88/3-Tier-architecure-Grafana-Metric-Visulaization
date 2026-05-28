@@ -8,7 +8,7 @@ function App() {
   useEffect(() => {
     axios
       .get(
-        "http://internal-alb-backend-664704932.ap-southeast-2.elb.amazonaws.com/api/message"
+        "http://internal-Backend-Internal-ALb-1288544040.ca-central-1.elb.amazonaws.com/api/message"
       )
       .then((res) => {
         setData(res.data);
