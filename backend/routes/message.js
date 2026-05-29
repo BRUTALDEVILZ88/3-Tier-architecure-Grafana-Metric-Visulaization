@@ -3,7 +3,7 @@ const router = express.Router();
 
 router.get('/message', (req, res) => {
   res.json({
-    message: "Hello from the backend! 🚀 oggy",
+    message: "Hello from the backend! Rishita",
     app: "CloudOps Backend",
     status: "Healthy",
     timestamp: new Date().toISOString()
